@@ -6,7 +6,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <StyledFooter className="d-flex justify-content-between align-items-center ">
+    <StyledFooter className="d-flex justify-content-between align-items-center  ">
       <div>
         <p>E-COMMERCE SERVICE</p>
         <p>2022 &copy; Seokwoo Park</p>
