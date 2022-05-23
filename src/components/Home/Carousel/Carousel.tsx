@@ -33,7 +33,7 @@ const HomeCarousel = ({ weeklyDeal }: Props) => {
                     <small>NOW</small>
                     <h3 className="text-primary">{item.price} €</h3>
                   </div>
-                  <Button className="h-100 align-self-center">MORE</Button>
+                  <Button className="h-100 align-self-center mt-2">MORE</Button>
                 </div>
               </div>
             </div>

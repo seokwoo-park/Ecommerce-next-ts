@@ -13,7 +13,7 @@ const Header = (props: Props) => {
       <Container>
         <Navbar.Brand>
           <Link href="/">
-            <h1>E-YES</h1>
+            <h1 style={{ cursor: "pointer" }}>E-YES</h1>
           </Link>
         </Navbar.Brand>
         <Nav className="gap-4">

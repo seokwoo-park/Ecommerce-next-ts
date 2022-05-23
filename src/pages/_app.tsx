@@ -1,15 +1,16 @@
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { AppProps } from "next/app";
-import { Footer, Header, HomeLayout } from "../components/index";
+import { CategoriesNav, Footer, Header, Layout } from "../components/index";
 
 function Application({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
-      <HomeLayout>
+      <CategoriesNav />
+      <Layout>
         <Component {...pageProps} />
-      </HomeLayout>
+      </Layout>
       <Footer />
     </>
   );
