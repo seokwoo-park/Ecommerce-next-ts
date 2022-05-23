@@ -7,12 +7,18 @@ const CategoriesNav = () => {
   return (
     // <Container>
     <StyledCategories>
-      <Link href="/categories/1">
+      <Link href="/categories/men">
         <StyledNavButton>Men</StyledNavButton>
       </Link>
-      <StyledNavButton>Women</StyledNavButton>
-      <StyledNavButton>Jewelry</StyledNavButton>
-      <StyledNavButton>Electronics</StyledNavButton>
+      <Link href="/categories/women">
+        <StyledNavButton>Women</StyledNavButton>
+      </Link>
+      <Link href="/categories/jewelry">
+        <StyledNavButton>Jewelry</StyledNavButton>
+      </Link>
+      <Link href="/categories/electronics">
+        <StyledNavButton>Electronics</StyledNavButton>
+      </Link>
     </StyledCategories>
     // </Container>
   );
