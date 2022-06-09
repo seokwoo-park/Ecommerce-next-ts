@@ -7,7 +7,7 @@ function Application({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
-      <CategoriesNav />
+      {/* <CategoriesNav /> */}
       <Layout>
         <Component {...pageProps} />
       </Layout>
