@@ -1,6 +1,21 @@
 export const getAllProducts = async () => {
-  const data = await fetch("https://fakestoreapi.com/products").then((res) =>
-    res.json()
-  );
-  return data;
+  try {
+    const data = await fetch("https://fakestoreapi.com/products").then((res) =>
+      res.json()
+    );
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getSingleProducts = async (id) => {
+  try {
+    const data = fetch(`https://fakestoreapi.com/products/${id}`).then((res) =>
+      res.json()
+    );
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };

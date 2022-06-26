@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
-import { ProductsType } from "@/constants/types/products";
+import { ProductsType } from "@/types/products";
 import { AiOutlineHeart, AiFillHeart, AiFillStar } from "react-icons/ai";
 import { StyledCard } from "./AllProducts.style";
 
@@ -30,8 +30,11 @@ const AllProducts = ({ products }: Props) => {
                   </p>
                 </div>
               </Card.Header>
-              <Button className="justify-self-center overlay-content">
-                Go
+              <Button
+                className="justify-self-center overlay-content"
+                href={`/product/${item.id}`}
+              >
+                See more
               </Button>
             </Card.ImgOverlay>
             <Card.Header>{item.title}</Card.Header>

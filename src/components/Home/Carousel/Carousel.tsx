@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button, Carousel } from "react-bootstrap";
 import { StyledCarousel } from "./Carousel.style";
-import { ProductsType } from "@/constants/types/products";
+import { ProductsType } from "@/types/products";
 
 type Props = {
   weeklyDeal: ProductsType[];
@@ -33,7 +33,12 @@ const HomeCarousel = ({ weeklyDeal }: Props) => {
                     <small>NOW</small>
                     <h3 className="text-primary">{item.price} €</h3>
                   </div>
-                  <Button className="h-100 align-self-center mt-2">MORE</Button>
+                  <Button
+                    className="h-100 align-self-center mt-2"
+                    href={`/product/${item.id}`}
+                  >
+                    See more
+                  </Button>
                 </div>
               </div>
             </div>

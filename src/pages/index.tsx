@@ -1,5 +1,5 @@
-import { AllProducts, BasicLayout, Carousel } from "../components/index";
 import React from "react";
+import { AllProducts, BasicLayout, Carousel } from "../components/index";
 import { GetServerSideProps } from "next";
 import { getAllProducts } from "./api/products";
 import { ProductsType } from "@/types/products";
