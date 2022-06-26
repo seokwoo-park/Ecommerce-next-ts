@@ -7,7 +7,7 @@ export const StyledNavbar = styled(Navbar)`
   position: sticky;
   inset: 0;
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 2;
 
   -webkit-box-shadow: 0px 25px 44px -27px rgba(175, 175, 175, 1);
   -moz-box-shadow: 0px 25px 44px -27px rgba(175, 175, 175, 1);

@@ -1,8 +1,8 @@
-import { AllProducts, Carousel } from "../components/index";
+import { AllProducts, BasicLayout, Carousel } from "../components/index";
 import React from "react";
 import { GetServerSideProps } from "next";
 import { getAllProducts } from "./api/products";
-import { ProductsType } from "@/constants/types/products";
+import { ProductsType } from "@/types/products";
 
 type Props = {
   products: ProductsType[];
@@ -22,11 +22,11 @@ const Home = ({ products }: Props) => {
   const weeklyDeal = [products[2], products[3], products[5], products[6]];
 
   return (
-    <div>
+    <BasicLayout>
       <Carousel weeklyDeal={weeklyDeal} />
       <h2 className="my-5">All products</h2>
       <AllProducts products={products} />
-    </div>
+    </BasicLayout>
   );
 };
 
