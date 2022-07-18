@@ -5,7 +5,6 @@ import React from "react";
 import { getAllProducts, getSingleProducts } from "../api/products";
 import Image from "next/image";
 import { Button, Col, Row } from "react-bootstrap";
-import { StyledImageWrapper } from "./ProductDetails.style";
 import { StarRating } from "../../components";
 
 type Props = {
@@ -43,8 +42,8 @@ const ProductDetails = ({ product }: Props) => {
   console.log(product);
   return (
     <BasicLayout>
-      <Row className="justify-content-center align-items-center mt-5">
-        <StyledImageWrapper xs={12} lg={6}>
+      <Row className="mt-5">
+        <Col className="d-flex justify-content-center" xs={12} lg={6}>
           <Image
             src={product.image}
             alt={product.title}
@@ -52,7 +51,7 @@ const ProductDetails = ({ product }: Props) => {
             height="300px"
             objectFit="contain"
           />
-        </StyledImageWrapper>
+        </Col>
         <Col xs={12} lg={6}>
           <h2>{product.title}</h2>
           <small>{product.category}</small>
