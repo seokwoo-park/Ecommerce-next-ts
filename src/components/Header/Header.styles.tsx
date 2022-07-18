@@ -13,7 +13,7 @@ export const StyledNavbar = styled(Navbar)`
   -moz-box-shadow: 0px 25px 44px -27px rgba(175, 175, 175, 1);
   box-shadow: 0px 25px 44px -27px rgba(175, 175, 175, 1);
 
-  & h1 {
-    font-family: "Permanent Marker", cursive;
+  h1 {
+    font-family: "Permanent Marker", "cursive" !important;
   }
 `;

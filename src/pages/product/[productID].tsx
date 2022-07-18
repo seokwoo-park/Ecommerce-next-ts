@@ -4,6 +4,10 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import { getAllProducts, getSingleProducts } from "../api/products";
 import Image from "next/image";
+import { Button, Col, Row } from "react-bootstrap";
+import { StyledImageWrapper } from "./[productID].style";
+import { AiFillStar } from "react-icons/ai";
+import { StarRating } from "../../components";
 
 type Props = {
   product: ProductsType;
@@ -40,10 +44,25 @@ const ProductDetails = ({ product }: Props) => {
   console.log(product);
   return (
     <BasicLayout>
-      <h1>{product.title}</h1>
-      <Image src={product.image} width="100%" height="100%" />
-      <h2>{product.price} €</h2>
-      <p>{product.description}</p>
+      <Row className="justify-content-center align-items-center mt-5">
+        <StyledImageWrapper xs={12} lg={6}>
+          <Image
+            src={product.image}
+            alt={product.title}
+            width="200px"
+            height="300px"
+            objectFit="contain"
+          />
+        </StyledImageWrapper>
+        <Col xs={12} lg={6}>
+          <h2>{product.title}</h2>
+          <small>{product.category}</small>
+          <h2>{product.price} €</h2>
+          <StarRating rating={product.rating} />
+          <p>{product.description}</p>
+          <Button>Add to cart</Button>
+        </Col>
+      </Row>
     </BasicLayout>
   );
 };
