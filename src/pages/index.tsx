@@ -10,7 +10,6 @@ type Props = {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const products = await getAllProducts();
-
   return {
     props: {
       products,

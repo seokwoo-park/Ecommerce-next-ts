@@ -5,8 +5,7 @@ import React from "react";
 import { getAllProducts, getSingleProducts } from "../api/products";
 import Image from "next/image";
 import { Button, Col, Row } from "react-bootstrap";
-import { StyledImageWrapper } from "./[productID].style";
-import { AiFillStar } from "react-icons/ai";
+import { StyledImageWrapper } from "./ProductDetails.style";
 import { StarRating } from "../../components";
 
 type Props = {

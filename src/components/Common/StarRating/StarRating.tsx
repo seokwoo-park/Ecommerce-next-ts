@@ -9,8 +9,8 @@ const StarRating = ({ rating }: Props) => {
   return (
     <div className="d-flex align-items-center gap-2">
       <div>
-        {[...new Array(Math.round(rating.rate))].map(() => (
-          <AiFillStar className="mb-3" size={20} />
+        {[...new Array(Math.round(rating.rate))].map((v, index) => (
+          <AiFillStar className="mb-3" size={20} key={v + index} />
         ))}
       </div>
       <p>
