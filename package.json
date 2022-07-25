@@ -13,6 +13,7 @@
     "next": "^12.1.6",
     "react": "^17.0.2",
     "react-bootstrap": "^2.4.0",
+    "react-countdown-customizable": "^0.1.3",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "styled-components": "^5.3.5"

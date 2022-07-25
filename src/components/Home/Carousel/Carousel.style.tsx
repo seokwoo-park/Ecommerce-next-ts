@@ -18,6 +18,7 @@ export const StyledCarousel = styled(Carousel)`
   }
 
   .carousel-indicators {
+    z-index: 0;
     button {
       background-color: black;
     }
