@@ -3,12 +3,19 @@ import { Button, Card, Col, Row } from "react-bootstrap";
 import { ProductsType } from "@/types/products";
 import { AiOutlineHeart, AiFillHeart, AiFillStar } from "react-icons/ai";
 import { StyledCard } from "./AllProducts.style";
+import { useDispatch, useSelector } from "react-redux";
+import { addCart, removeCart, selectCartState } from "../../../store/cartSlice";
 
 type Props = {
   products: ProductsType[];
 };
 
 const AllProducts = ({ products }: Props) => {
+  const dispatch = useDispatch();
+  const { currentCart } = useSelector(selectCartState);
+
+  console.log(currentCart);
+
   return (
     <Row xs={2} md={3} lg={5} className="g-4">
       {products.map((item) => (
@@ -16,10 +23,20 @@ const AllProducts = ({ products }: Props) => {
           <StyledCard>
             <Card.Img variant="top" src={item.image} />
             <Card.ImgOverlay>
-              <AiOutlineHeart
-                className="align-self-end wishlist overlay-content"
-                size={30}
-              />
+              {currentCart.some(({ product }) => product === item.title) ? (
+                <AiFillHeart
+                  color="red"
+                  className="align-self-end wishlist overlay-content"
+                  size={30}
+                  onClick={() => dispatch(removeCart(item.title))}
+                />
+              ) : (
+                <AiOutlineHeart
+                  className="align-self-end wishlist overlay-content"
+                  size={30}
+                  onClick={() => dispatch(addCart(item.title))}
+                />
+              )}
               <Card.Header className="overlay-content">
                 <h2 className="overlay-price">{item.price} €</h2>
                 <div className="d-flex justify-content-center align-items-center gap-1">

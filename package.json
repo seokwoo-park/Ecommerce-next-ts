@@ -8,14 +8,17 @@
     "export": "next export"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
     "@types/styled-components": "^5.1.25",
     "bootstrap": "^5.1.3",
     "next": "^12.1.6",
+    "next-redux-wrapper": "^7.0.5",
     "react": "^17.0.2",
     "react-bootstrap": "^2.4.0",
     "react-countdown-customizable": "^0.1.3",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-redux": "^8.0.2",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
