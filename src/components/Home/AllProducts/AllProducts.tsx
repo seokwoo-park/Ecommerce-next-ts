@@ -26,13 +26,13 @@ const AllProducts = ({ products }: Props) => {
                   color="red"
                   className="align-self-end wishlist overlay-content"
                   size={30}
-                  onClick={() => dispatch(removeCart(item.title))}
+                  onClick={() => dispatch(removeCart(item))}
                 />
               ) : (
                 <AiOutlineHeart
                   className="align-self-end wishlist overlay-content"
                   size={30}
-                  onClick={() => dispatch(addCart(item.title))}
+                  onClick={() => dispatch(addCart(item))}
                 />
               )}
               <Card.Header className="overlay-content">

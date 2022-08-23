@@ -17,20 +17,34 @@ export const StyledCircle = styled.div`
   }
 
   :hover {
-    transform: scale(1.1);
+    svg {
+      transform: scale(1.1);
+    }
+    .cart__card {
+      display: block;
+    }
   }
 
   .cart-bubble {
     position: absolute;
+    z-index: 2;
     right: -5px;
     bottom: -5px;
     width: 1.2rem;
     height: 1.2rem;
-    background-color: #524f4f;
-    /* background-color: #ff5a00; */
+    background-color: #ff5a00;
     color: #ffffff;
     font-weight: 600;
     font-size: 0.8rem;
     border-radius: 100%;
+  }
+
+  .cart__card {
+    display: none;
+    position: absolute;
+    width: 500px;
+    /* height: 700px; */
+    top: 49px;
+    right: 0;
   }
 `;
